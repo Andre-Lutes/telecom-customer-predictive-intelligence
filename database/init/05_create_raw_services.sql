@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS raw.services (
+    service_id VARCHAR(50) PRIMARY KEY,
+    customer_id VARCHAR(50) UNIQUE NOT NULL,
+    count INTEGER,
+    quarter VARCHAR(10),
+    referred_a_friend VARCHAR(10),
+    number_of_referrals INTEGER,
+    tenure_in_months INTEGER,
+    offer VARCHAR(20),
+    phone_service VARCHAR(10),
+    avg_monthly_long_distance_charges NUMERIC(10, 2),
+    multiple_lines VARCHAR(10),
+    internet_service VARCHAR(10),
+    internet_type VARCHAR(30),
+    avg_monthly_gb_download INTEGER,
+    online_security VARCHAR(10),
+    online_backup VARCHAR(10),
+    device_protection_plan VARCHAR(10),
+    premium_tech_support VARCHAR(10),
+    streaming_tv VARCHAR(10),
+    streaming_movies VARCHAR(10),
+    streaming_music VARCHAR(10),
+    unlimited_data VARCHAR(10),
+    contract VARCHAR(30),
+    paperless_billing VARCHAR(10),
+    payment_method VARCHAR(50),
+    monthly_charge NUMERIC(10, 2),
+    total_charges NUMERIC(12, 2),
+    total_refunds NUMERIC(12, 2),
+    total_extra_data_charges NUMERIC(12, 2),
+    total_long_distance_charges NUMERIC(12, 2),
+    total_revenue NUMERIC(12, 2),
+
+    CONSTRAINT fk_services_customer
+        FOREIGN KEY (customer_id)
+        REFERENCES raw.demographics (customer_id)
+);

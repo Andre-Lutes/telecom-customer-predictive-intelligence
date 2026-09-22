@@ -13,3 +13,4 @@ dependencies:
   - psycopg
   - sqlalchemy
   - python-dotenv
+  - openpyxl
