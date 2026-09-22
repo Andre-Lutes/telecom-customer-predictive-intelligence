@@ -12,3 +12,4 @@ dependencies:
   - matplotlib
   - psycopg
   - sqlalchemy
+  - python-dotenv
