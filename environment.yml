@@ -10,3 +10,5 @@ dependencies:
   - scikit-learn
   - pandas
   - matplotlib
+  - psycopg
+  - sqlalchemy
